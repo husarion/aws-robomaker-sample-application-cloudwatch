@@ -4,7 +4,8 @@ HOME_DIR=$(pwd)
 
 if [ $# -eq 2 ]
 then
-    BUCKET_NAME="$1"
+    BUCKET_ARN="$1"
+    BUCKET_NAME=$(echo "$BUCKET_ARN" | sed -e "s/^arn:aws:s3::://")
     DEPLOYMENT_ROLE_ARN="$2"
     echo "Bucket name is " $BUCKET_NAME
     echo "Deployment role ARN is " $DEPLOYMENT_ROLE_ARN
