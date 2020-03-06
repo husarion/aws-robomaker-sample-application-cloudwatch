@@ -247,6 +247,6 @@ if __name__ == "__main__":
     if args.robot:
         robot_name = args.robot
     else:
-        robot_name = 'ROSbot_18_04'
+        robot_name = 'ROSbot'
 
     start_deployment(fleet_name, robot_name, bucket_name)
